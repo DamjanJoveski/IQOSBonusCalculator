@@ -1,9 +1,12 @@
-.BonusTypes {
-    height: 400px;
-    width: 400px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+
+.App{
+    height: 500px;
+    width: 300px;
     margin-left: 70px;
-    margin-top: 90px;
+    margin-top: 80px;
+}
+
+.Counter{
+    background-color: yellow;
+
 }
