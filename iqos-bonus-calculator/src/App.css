@@ -1,0 +1,9 @@
+.BonusTypes {
+    height: 400px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 70px;
+    margin-top: 90px;
+}
