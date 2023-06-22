@@ -1,11 +1,16 @@
 import './PlusButton.css'
 
-function plusButton() {
+function PlusButton(props) {
+
+    function clickHandler (){
+        props.incrementCounter();
+    }
+
     return(
         <div className="PlusButton">
-            <button type='button'><h1>+</h1></button>
+            <button type='button' onClick={clickHandler}><h1>+</h1></button>
         </div>
     )
 }
 
-export default plusButton;
+export default PlusButton;

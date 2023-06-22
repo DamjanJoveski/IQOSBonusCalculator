@@ -1,12 +1,9 @@
-
 .App{
+    display: flex;
+    flex-direction: column;
     height: 500px;
     width: 300px;
     margin-left: 70px;
     margin-top: 80px;
 }
 
-.Counter{
-    background-color: yellow;
-
-}

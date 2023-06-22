@@ -1,26 +1,34 @@
 import './App.css';
-import './bonusType/BonusType'
 import BonusType from "./bonusType/BonusType";
-import PlusButton from "./plusButton/PlusButton";
-import {Fragment} from "react";
-import Counter from "./counter/Counter";
+import { useState } from "react";
 
 function App() {
+    const [numberOfAcquisitions, setNumberOfAcquisitions] = useState(0);
+    const [numberOfSwaps, setNumberOfSwaps] = useState(0);
+    const [numberOfSwapsWithFee, setNumberOfSwapsWithFee] = useState(0);
 
-  const bonusTypes = ["Продажба на прв уред:","Замени:","Замени со доплата:"];
+    const bonusTypes = [
+        { name: "Продажба на прв уред:", count: numberOfAcquisitions,id:1 },
+        { name: "Замени:", count: numberOfSwaps,id:2 },
+        { name: "Замени со доплата:", count: numberOfSwapsWithFee,id:3 }
+    ];
+
+    function incrementCounter(bonusTypeId) {
+        if (bonusTypeId === 1) {
+            setNumberOfAcquisitions((prevCount) => prevCount + 1);
+        } else if (bonusTypeId === 2) {
+            setNumberOfSwaps((prevCount) => prevCount + 1);
+        } else if (bonusTypeId === 3) {
+            setNumberOfSwapsWithFee((prevCount) => prevCount + 1);
+        }
+    }
 
     return (
         <div className='App'>
-            {bonusTypes.map((name) => (
-                <Fragment key={name}>
-                    <div className='BonusTypes'>
-                        <BonusType name={name} />
-                    </div>
-                    <PlusButton />
-                    <div className='Counter'>
-                        <Counter/>
-                    </div>
-                </Fragment>
+            {bonusTypes.map((bonusType) => (
+                <div className='BonusTypes' >
+                    <BonusType id={bonusType.id} name={bonusType.name} count={bonusType.count} incrementCounter={incrementCounter} />
+                </div>
             ))}
         </div>
     );
