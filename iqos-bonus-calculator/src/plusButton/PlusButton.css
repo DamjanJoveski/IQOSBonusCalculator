@@ -22,7 +22,7 @@ button:hover {
 
 button:before {
     content: "";
-    position: absolute;
+    position: relative;
     left: -4em;
     width: 4em;
     height: 100%;
