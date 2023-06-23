@@ -12,9 +12,15 @@ function BonusType (props) {
     return (
         <div className='BonusType'>
             <h2>{props.name}</h2>
-            <PlusButton incrementCounter={incrementCounter} />
-            <Counter count={props.count} />
-            <BonusAmount count={props.count}/>
+            <div className='Button'>
+                <PlusButton incrementCounter={incrementCounter} />
+            </div>
+            <div className='Counter'>
+                <Counter count={props.count} />
+            </div>
+            <div className='BonusAmount'>
+                <BonusAmount count={props.count}/>
+            </div>
         </div>
     )
 }
