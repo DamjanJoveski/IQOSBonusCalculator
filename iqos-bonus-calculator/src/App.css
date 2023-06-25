@@ -1,9 +1,9 @@
 .App{
-    display: flex;
-    flex-direction: column;
+    display:grid;
     height: 300px;
     width: 600px;
     margin-left: 70px;
     margin-top: 80px;
+    background-color: yellow;
 }
 

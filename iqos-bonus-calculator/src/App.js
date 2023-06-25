@@ -54,10 +54,28 @@ function App() {
         window.localStorage.setItem('SWAPS_WITH_FEE_VALUES', JSON.stringify(numberOfSwapsWithFee));
     }, [numberOfSwapsWithFee]);
 
+    const [currentMonth, setCurrentMonth] = useState(JSON.parse(localStorage.getItem('CURRENT_MONTH')));
+
+    let today = new Date();
+    let monthIndex = today.getMonth();
+
+    if (monthIndex - currentMonth === 1){
+        console.log('newmmonth')
+        setCurrentMonth(monthIndex);
+        window.localStorage.setItem('CURRENT_MONTH', JSON.stringify(monthIndex));
+        window.localStorage.setItem(`MONTH_${monthIndex}`, JSON.stringify(
+            {acquisition: numberOfAcquisitions, swaps: numberOfSwaps, swapsWithFee: numberOfSwapsWithFee}
+        ))
+    }
+
+
+
+
+
     return (
         <div>
             <div className='Month'>
-                <Month />
+                <Month monthIndex={monthIndex} />
             </div>
             <div className='App'>
                 {bonusTypes.map((bonusType) => (
