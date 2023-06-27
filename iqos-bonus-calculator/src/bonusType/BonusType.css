@@ -1,24 +1,21 @@
 .BonusType{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     border: #82ffc9;
     border-style: solid;
     border-width: 2px;
 }
 
 .Button {
-    position: absolute;
-    left:20%
+
+
 }
 
 .BonusAmount{
-    position: absolute;
-    left: 30%;
 
 }
 
 .Counter{
-    position: absolute;
-    left:25%;
+
 }

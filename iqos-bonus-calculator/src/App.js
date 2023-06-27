@@ -70,8 +70,6 @@ function App() {
 
 
 
-
-
     return (
         <div>
             <div className='Month'>
