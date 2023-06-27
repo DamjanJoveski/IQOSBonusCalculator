@@ -6,7 +6,7 @@ function TotalSum(props) {
 
     return(
         <div className='TotalSum'>
-            <h1>Вкупно: {totalAmount} денари </h1>
+            <h1 className='MonthText'>Вкупно: {totalAmount} денари </h1>
         </div>
     )
 }
