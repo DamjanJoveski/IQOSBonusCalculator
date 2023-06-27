@@ -83,6 +83,7 @@ function App() {
                 ))}
                 <TotalSum totalCount={TotalCount} />
             </div>
+            <p classname="footer"> Damjan Joveski</p>
         </div>
     );
 }
