@@ -71,6 +71,7 @@ function App() {
 
 
     return (
+        // Damjan Joveski
         <div>
             <div className='Month'>
                 <Month monthIndex={monthIndex} />
@@ -83,9 +84,6 @@ function App() {
                 ))}
                 <TotalSum totalCount={TotalCount} />
             </div>
-            <footer classname="footer" >
-            <p> Damjan Joveski</p>
-            </footer>
         </div>
     );
 }
