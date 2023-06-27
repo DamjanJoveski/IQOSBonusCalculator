@@ -83,8 +83,8 @@ function App() {
                 ))}
                 <TotalSum totalCount={TotalCount} />
             </div>
-            <footer>
-            <p classname="footer"> Damjan Joveski</p>
+            <footer classname="footer" >
+            <p> Damjan Joveski</p>
             </footer>
         </div>
     );
